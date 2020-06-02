@@ -1,11 +1,6 @@
 # Add  code here!
 
-def is_prime?(n)
-    if n <= 1
-        false
-    elsif n == 2
-        true
-    else 
-        (2..n/2).none? { |i| n % i == 0}
+ def is_prime?(n)
+      return false if n < 2
+      (2..Math.sqrt(n)).none? {|num| length % num == 0}
     end
-end
