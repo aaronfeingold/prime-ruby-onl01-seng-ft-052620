@@ -1,6 +1,6 @@
 # Add  code here!
 
-def is_prime? (n)
+def is_prime?(n)
     if n <= 1
         false
     elsif n == 2
