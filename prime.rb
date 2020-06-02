@@ -1,14 +1,17 @@
 # Add  code here!
 
 def prime?(num)
-  return true if num == 2
-  return false if num <= 1 || num.even?
-  i = 3
-  top = Math.sqrt(num).floor
-  loop do
-    return false if (num % i).zero?
-    i += 2
-    break if i >= top
+  prime_numbers = []
+  num.each do |number|
+      prime_numbers << number if is_prime(number)
   end
-  true
+  prime_numbers
 end
+
+def is_prime(n)
+   if factors(n).count > 2
+      return true
+   end
+   return false
+end
+
