@@ -1,6 +1,11 @@
 # Add  code here!
 
- def is_prime?(n)
-      return false if n < 2
-      (2..Math.sqrt(n)).none? {|num| length % num == 0}
+def prime?(n)
+  return false if n < 2 
+  return true if n == 3 || n == 2 
+    if (2...n-1).any?{|i| n % i == 0}
+      false
+    else
+      true
     end
+en
