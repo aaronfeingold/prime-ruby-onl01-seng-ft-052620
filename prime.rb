@@ -16,6 +16,6 @@
 # end
 
 def is_prime?(num)
-   Math.sqrt(num).floor.downto(2).each {|i| return false if num % i == 0}
-   true
-end
+        (2..Math.sqrt(num)).each { |i| return false if num % i == 0}
+        true
+    end
